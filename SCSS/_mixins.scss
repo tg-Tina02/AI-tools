@@ -1,0 +1,25 @@
+
+@mixin font-style($font-color:#000,$fsz:16px,$line-height:1.5,$fw:400) {
+    color: $font-color;
+    font-size: $fsz;
+    line-height: $line-height;
+    font-weight:$fw;
+};
+
+@mixin card-outline($border-color){
+    border:1px solid $border-color;
+    border-radius:16px;
+};
+
+
+@mixin ipad{
+    @media (max-width:767px){
+        @content
+    }
+};
+
+@mixin iphone{
+    @media (max-width:575px){
+        @content
+    }
+};

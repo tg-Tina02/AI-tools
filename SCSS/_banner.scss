@@ -1,0 +1,57 @@
+.banner{
+    padding-top: 40px;
+    h2{
+        @include font-style($Black-0,120px,1.2,900);
+
+        @include ipad(){
+          font-size: 48px;
+        }
+    }
+
+    // 價格那頁
+    h4{
+      @include font-style($Black-0,48px,1.2,900);
+      @include ipad(){
+        font-size: 28px;
+      }
+    }
+    .banner-text{
+      margin-top: 80px;
+      margin-bottom: 238px;
+      @include ipad(){
+        margin-top: 64px;
+        margin-bottom: 258px;
+      }
+    }
+  }
+
+  .banner-btn{
+      display:inline-block;
+      padding: 20px 40px;
+      color: $Black-0;
+      @include card-outline($Black-0);
+  }
+    
+  .banner-animation-group{
+      img{
+        position: relative;
+        top: 100%;
+        @include ipad(){
+          width: 33%;
+        }
+      }
+      .arrow-1{
+        animation: banner-animation 3.5s 0.8s ease-in-out infinite;
+      }
+      .arrow-2{
+        animation: banner-animation 3.5s 0.4s  ease-in-out infinite;
+      }
+      .arrow-3{
+        animation: banner-animation 3.5s 0s ease-in-out infinite;
+      }
+    }
+    @keyframes banner-animation{
+      0%{top:110%;}
+      40%,60%{top:0%}
+      100%{top:-110%}
+    }

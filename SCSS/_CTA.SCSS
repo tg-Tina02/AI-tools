@@ -1,0 +1,100 @@
+// .callToAction{
+// }
+.buildService{
+    border-bottom: 1px solid $Black-0;
+    padding: 158px 0;
+    h2{
+        margin-bottom: 40px;
+        @include font-style($Black-0,48px,1.2,900);
+
+        @include ipad(){
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+    }
+    a{
+        @include font-style($Black-0,20px,1.2,900);
+        @include card-outline($Black-0);
+        display: inline-block;
+        padding: 20px 40px;
+    }
+}
+.question{
+    margin-top: 158px;
+    padding-bottom: 160px;
+}
+// bs手風琴
+.accordion{
+    color: #fff;
+    .accordion-item{
+        @include card-outline($Black-0);
+        background: none;
+        button{
+            background: none;
+            color: $Black-0;
+        }
+        .accordion-button::after {
+            display: none;
+        }
+    }
+}
+//自己的手風琴
+.question-item{
+    margin-bottom:16px; 
+    @include card-outline($Black-80);
+    // overflow: hidden;
+    &:hover{
+        @include card-outline($Black-0);
+        transition: all 0.2s linear;//不確定//
+    }
+    .question-btn{
+        padding: 0px 20px 0px 60px;
+        width: 100%;
+        background: none;
+        border: none;
+        @include font-style($Black-0,20px,1.2,900);
+        h4{
+            text-align: left;
+            position: relative;
+            margin: 20px 0;
+        }
+        .btn-icon{
+            position: absolute;
+            color: $Black-0;
+            margin-right: 10px;
+            top: 3px;
+            right: 100%;
+        }
+        .btn-icon-vertical{
+            transform: rotate(90deg);
+        }
+    }
+    .question-text{
+        @include font-style($Black-0,16px,1.5,400);
+        // display: none;
+        padding: 0 20px 20px 60px;
+    }
+    // +-號 樣式
+    .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 900,
+        'GRAD' 0,
+        'opsz' 48
+    }
+}
+.siteMap{
+    padding: 80px 0;
+    // border-top: 1px solid $Black-0;
+    border-bottom: 1px solid $Black-0;
+    a{
+        @include font-style($Black-0,80px,1.2,900);
+        
+        @include ipad(){
+            font-size: 48px;
+        }
+    }
+    img{
+        height:40px;
+    }
+}

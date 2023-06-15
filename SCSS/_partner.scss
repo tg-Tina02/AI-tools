@@ -1,0 +1,126 @@
+.partner{
+    margin-top: 160px;
+}
+.partner-logo::before,.partner-logo::after{
+    content:"";
+    position:absolute;
+    width: 196px;
+    height: 100%;
+    top: 0;
+    @include ipad(){
+        width:100px;
+      }
+}
+.partner-logo::before {
+    left: 0px;
+    background: linear-gradient(90deg,#000,rgba(0,0,0,0));
+  }
+  
+.partner-logo::after {
+right: 0px;
+background: linear-gradient(90deg,rgba(0,0,0,0),#000);
+}
+.enterprise{
+    display:flex;
+    justify-content: center;
+    overflow: auto;
+    li{
+        margin-right:10px;
+        margin-left:10px;
+    }
+    img {
+        height: 40px;
+        vertical-align: middle;
+      }
+}
+/* 隱藏 x 軸 */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.enterprise::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.enterprise {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+
+
+// 輪播
+.slider {
+    width: 100%;
+    margin: auto;
+    overflow: hidden; // 這邊很重要 一定要加，若想看到底怎麼跑的，可以先槓掉，就可以看出ul向左移動的軌跡
+    position: relative; 
+
+    ul.list {
+      position: relative;
+      width: 100%;
+      left: 0;
+      font-size: 0;
+
+      display:flex;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: $border-radius-16;
+        margin: 0 12px;
+
+        .card-body{
+            padding:40px 40px 0px 40px;
+            @include ipad(){
+                padding:20px 20px 0px 20px;
+              }
+        }
+        .card-text{
+            margin-top: 22px;
+            @include font-style($Black-20,16px,1.5,400);
+        }
+        .card-bottom{
+            padding:40px 40px 40px 40px;
+            @include ipad(){
+                padding:20px 20px 20px 20px;
+              }
+        }
+        .writer-info{
+            margin-left:16px;
+            text-align: left;
+        }
+        .writer-name{
+            margin-bottom: 4px;
+            @include font-style($Black-0,16px,1.2,700);
+        }
+        .writer-company{
+            @include font-style($Black-0,14px,1.5,400);
+        }
+      }
+    }
+
+    .status {
+      text-align: center;
+      padding: 10px;
+      .dot {
+        cursor: pointer;
+        height: 8px;
+        width: 8px;
+        margin: 0 5px;
+        background-color: $Black-80;
+        border-radius: 50%;
+        display: inline-block; //這樣寬高才會出來
+        transition: background-color 0.6s ease;
+        &.active,
+        &:hover {
+          background-color: $Black-0;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }

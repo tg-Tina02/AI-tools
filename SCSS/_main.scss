@@ -1,0 +1,47 @@
+body{
+    background: $Black-100;
+    // font-family: Noto Sans TC;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+h3{
+    @include font-style($Black-0,32px,1.2,900);
+
+    @include ipad(){
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+}
+p{
+    text-align: justify;
+    @include font-style($Black-20,16px,1.5,400);
+}
+
+.btn-icon{
+    position: relative;
+    top: 5px;
+    margin-left: 3px;
+}
+
+.arrow-up{
+    &:hover{
+        span{
+            transform: translateY(-15%);
+            transition: all 0.2s linear;
+        }
+    }
+}
+
+.mt-160{
+    margin-top:160px;
+    @include ipad(){
+        margin-top:120px;
+      }
+}

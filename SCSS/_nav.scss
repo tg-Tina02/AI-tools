@@ -1,0 +1,74 @@
+.navbar{
+    padding:0;
+}
+
+// 漢堡icon button
+.navbar-toggler{
+    display:flex;
+    flex-direction:column;
+}
+// 漢堡icon的其中一個橫槓
+.hamburger-icon{
+    width:18px;
+    height:2px;
+    background:$Black-0;
+    margin: 1.5px 0;
+}
+// 漢堡icon 動畫
+.hamburger-rotate-down{
+    position:absolute;
+    transform:rotate(45deg);
+    transform-origin:center;
+    transition: all 0.3s;
+}
+.hamburger-hidden{
+    visibility:hidden;
+}
+.hamburger-rotate-up{
+    position:absolute;
+    transform:rotate(-45deg);
+    transform-origin:center;
+    transition: all 0.3s;
+}
+
+.navbar-nav{
+    @include ipad(){
+        height: 85vh;
+        border-top:1px solid $Black-0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align:center;
+    }
+    li{
+        display:inline-block;
+        a{
+            @include ipad(){
+                display: inline-block;
+                @include font-style($Black-0,80px,1.2,900);
+            }
+        }
+    }
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: $Black-0; 
+}
+
+.navbar-brand{
+    margin: 15px 0 ;
+    @include ipad(){
+        margin: 23px 0;
+    }
+    
+    img{
+        height: 40px;
+        @include ipad(){
+            height: 24px;
+        }
+    }
+}
+.nav-link{
+    &:hover{
+        opacity: 1;
+    }
+}

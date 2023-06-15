@@ -1,0 +1,7 @@
+.footer{
+    padding: 22px 0;
+    @include font-style($Black-0,16px,1.5,700);
+    a{
+        color: $Black-0;
+    }
+}

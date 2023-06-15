@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 工具王</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- 連結bs的css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- 連結外部icon樣式 -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- 我的 css -->
+    <link rel="stylesheet" href="css/all.css" />
+
+  </head>
+  <body>
+    
+    <!-- tools -->
+    <div class="tools bg-white">
+      <div class="container">
+        <h2>
+          這些超酷的應用，<br class="d-lg-none">都來自AI工具王
+        </h2>
+
+        <!-- 搜尋input -->
+        <div class="row tools-Search position-relative px-3">
+          <span class="material-symbols-outlined position-absolute">
+            search
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="輸入關鍵字搜尋"
+          />
+        </div>
+
+        <!-- tab -->
+        <div
+          class="resource-tab d-flex justify-content-between align-content-center"
+        >
+
+          <!-- （左邊）篩選 -->
+          <div class="filter">
+            <a href="javascript:" class="filter-button" id="filter-dropdown-btn">篩選<span class="material-symbols-outlined">
+              filter_alt
+              </span></a>
+            <ul class="filter-dropdown shadow" id="filter-dropdown">
+              <!-- 上半部 -->
+              <li class="filter-dropdown-item-title">AI模型</li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">所有模型</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">卡卡</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">杰杰</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">琪琪</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">昊昊</a></li>
+
+              <!-- 分隔線 -->
+              <li><hr class="mt-2" /></li>
+
+              <!-- 下半部 -->
+              <li class="filter-dropdown-item-title mt-3">類型</li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">所有類型</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目1</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目2</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目3</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目4</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目5</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目6</a></li>
+            </ul>
+          </div>
+
+          <!-- 中間頁籤 自己的 -->
+          <ul class="myNav">
+            <li class="nav-item">
+              <a class="nav-link bg-Active" aria-current="page" href="javascript:void(0)"
+                >全部</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">聊天</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">影像辨識</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">翻譯</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">行銷</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">客服</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0)">生產力</a>
+            </li>
+          </ul>
+
+          <!-- （右邊）由新到舊 -->
+          <div class="select">
+            <a href="javascript:" class="select-button" id="select-dropdown-btn">
+              <span class="dropdown-btnText d-inline-block">由新到舊</span>
+              <span class="material-symbols-outlined">
+              expand_more
+              </span>
+            </a>
+            <ul class="select-dropdown shadow" id="select-dropdown">
+              <li><a class="select-dropdown-item new-to-old" href="javascript:void(0)">由新到舊</a></li>
+              <li><a class="select-dropdown-item old-to-new" href="javascript:void(0)">由舊到新</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- card-list 串接API-->
+        <ul
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 tools-card-list gy-3 gx-3 p-0 justify-content-between" id="tools-card-list"
+        >
+      
+      </ul>
+
+        <!-- pagination bs-->
+        <ul class="pagination">
+          <li class="page-item ms-auto">
+            <a class="page-link bg-Active" href="javascript:void(0)">1</a>
+          </li>
+          <li class="page-item" aria-current="page">
+            <a class="page-link" href="javascript:void(0)">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0)">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0)">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0)">5</a>
+          </li>
+          <li class="page-item">
+            <a href="javascript:void(0)">
+              <span class="material-symbols-outlined"> chevron_right </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    
+
+    <!-- bs的js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- axios 套件 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="js/API串接.js"></script>
+
+    <!-- jq 的CDN (go to top) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- 我的js -->
+    <script src="js/all.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,280 @@
+.tools{
+    border-radius: 160px;
+    padding: 160px 0px;
+    margin-top: 160px;
+    @include ipad(){
+        border-radius: 20px;
+        padding: 80px 0px;
+        margin-top: 120px;
+        overflow: hidden;
+    }
+
+    h2{
+        margin-bottom: 80px;
+        @include font-style($Black-100,80px,1.2,900);
+        text-align: center;
+
+        @include ipad(){
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+    }
+    h4{
+        @include font-style($Black-100,20px,1.2,900);
+    }
+    p{
+        @include font-style($Black-80,14px,1.5,400);
+    }
+}
+.tools-Search{
+    margin-bottom: 24px;
+    color: $Black-60;
+    @include ipad(){
+        margin-bottom: 16px;
+        padding: 0 12px;
+    }
+
+    input{
+        background: $Black-20;
+        border-radius: $border-radius-16;
+        padding: 20px 0px 20px 80px;
+        border:none;
+        &:focus{
+            box-shadow:none;
+            background: $Black-20;
+        }
+    }
+    span{
+        top: 20px;
+        left: 40px;
+        width: 16px;
+    }
+}
+.resource-tab{
+    font-size: 16px;
+    margin-bottom: 40px;
+    @include ipad(){
+        flex-wrap: wrap;
+    }
+
+    position: relative;
+}
+
+    // 左邊 下拉選單
+    .filter{
+        // position: relative;
+        hr{
+            color:$Black-60;
+            margin:0 40px;
+        }
+        .filter-button{
+            display: inline-block;
+            padding: 20px 60px 20px 40px;
+            @include card-outline($Black-20);
+            text-align: center;
+            color:$Black-100;
+
+            span{
+                width:10.61px;
+                height:10.67px ;
+                position: relative;
+                top:5px;
+                left:15px;
+            }
+        }
+        .filter-dropdown{
+            display:none;
+            margin-top: 4px;
+            background: $Black-0;
+            border-radius: $border-radius-16;
+            width: 240px;
+            position: absolute;
+            left:0;
+            z-index:1000;
+            padding: 20px 0px;
+            @include ipad(){
+                width: auto;
+                left: 0;
+                right:0;
+            }
+        }
+        .filter-dropdown-item-title{
+            @include font-style($Black-60,12px,1.5,700);
+            padding: 0px 40px;
+            margin-bottom: 4px;
+        }
+        .filter-dropdown-item{
+            @include font-style($Black-100,16px,1.5,400);
+            display: block;
+            padding: 8px 40px;
+            &:hover{
+                background:$Black-20;
+            }
+            position: relative;
+        }
+        .check::after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-width: 0 0 1px 1px;
+            height: 7px;
+            width: 10px;
+            top: 12px;
+            right: 45px;
+            transform: rotate(315deg);
+                    }
+    }
+
+    // 中間 nav
+    .nav{
+        flex-shrink: 0;
+        @include ipad(){
+            order: 1;
+            margin-top: 16px;
+            overflow-x: auto;
+            // justify-content: center;
+        }
+        li{
+            margin: 0 4px;
+            border-radius: $border-radius-16;
+            overflow: hidden;
+        }
+        a{
+            color:$Black-60;
+            padding: 8px 16px;
+        }
+        .bg-Active{
+            color: $Black-100;
+            background: $Black-20; 
+            font-weight: 700;
+        }
+    }
+    .myNav{
+        display:flex;
+        padding: 0;
+        margin: auto;
+        @include ipad(){
+            order: 1;
+            margin-top: 16px;
+            flex-shrink: 0;
+            overflow-x: auto;
+            // justify-content: center;
+        }
+        li{
+            margin: 0 4px;
+            border-radius: $border-radius-16;
+            overflow: hidden;
+        }
+        a{
+            color:$Black-60;
+            padding: 8px 16px;
+        }
+        .bg-Active{
+            color: $Black-100;
+            background: $Black-20; 
+            font-weight: 700;
+        }
+    }
+
+    // 右邊 二選一
+    .select{
+        position: relative;
+        .select-button{
+            display: inline-block;
+            padding: 20px 40px;
+            @include card-outline($Black-20);
+            text-align: center;
+            color:$Black-100;
+
+            .material-symbols-outlined{
+                position: relative;
+                top:5px;
+                left:15px;
+            }
+        }
+        .select-dropdown{
+            display:none;
+            margin-top: 4px;
+            background: $Black-0;
+            border-radius: $border-radius-16;
+            width: 144px;
+            position: absolute;
+            right: 0;
+            z-index:1000;
+            padding: 20px 0px;
+        }
+        .select-dropdown-item{
+            @include font-style($Black-100,16px,1.5,400);
+            display: block;
+            padding: 8px 40px;
+            &:hover{
+                background:$Black-20;
+            }
+        }
+    }
+.tools-card-list{
+        .card{
+            overflow: hidden;
+            @include card-outline($Black-20);
+            @include ipad(){
+                margin-bottom: 12px;
+                &:hover{
+                    box-shadow: none;}
+            };
+
+            &:hover{
+                img{
+                    transform: scale(1.2,1.2);
+                    transform-origin: center;
+                    transition: all 0.3s ease-in;
+                }
+            }
+            .card-body{
+                padding: 20px 32px;
+                background: $Black-0;
+                z-index: 1;
+            }
+            .list-group{
+                border: none;
+                li{
+                    @include font-style($Black-100,16px,1.5,400);
+                    padding: 20px 32px;
+                    border: none;
+                    border-top: 1px solid $Black-20;
+                }
+                a{
+                    color: $Black-100;
+                }
+            }
+            
+        }
+    }
+.pagination{
+    margin-top: 40px;
+    li{
+        margin: 0 4px;
+        border-radius: $border-radius-16;
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a{
+        @include font-style($Black-100,14px,1.5,700);
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg-Active{
+        background: $Black-100;
+        color:$Black-0 ;
+    }
+}
