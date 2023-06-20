@@ -1,5 +1,9 @@
 .navbar{
     padding:0;
+    position: sticky;
+    top: 0;
+    background: #000;
+    z-index: 100;
 }
 
 // 漢堡icon button
@@ -30,15 +34,30 @@
     transform-origin:center;
     transition: all 0.3s;
 }
-
+.navbar-collapse{
+    @include ipad(){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        background: #000;
+        top:10vh;
+        width: 100%;
+        height: 90vh;
+        z-index: -100;
+    }
+}
 .navbar-nav{
     @include ipad(){
-        height: 85vh;
-        border-top:1px solid $Black-0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align:center;
+        width: 100%;
+        height: 100%;
+            a{
+                margin: auto;
+            }
     }
     li{
         display:inline-block;

@@ -18,46 +18,50 @@ $(document).ready(function() {
   });
 
 
-// tools 的篩選單
-$('#filter-dropdown-btn').click( function(event){
-  event.stopPropagation();
-  $('#filter-dropdown').toggle();
-  $(this).toggleClass(" border-dark");
-});
+  // tools 的篩選單
+  $('#filter-dropdown-btn').click( function(event){
+    event.stopPropagation();
+    $('#filter-dropdown').toggle();
+    $(this).toggleClass(" border-dark");
+  });
 
-$(document).click( function(){
-  // $('#filter-dropdown').hide();
-  // $('#filter-dropdown-btn').removeClass(" border-dark");
-});
+  // 中間 nav
+  $('.nav-link').click( function(event){
+    $('.nav-link').removeClass("bg-Active");
+    $(this).toggleClass("bg-Active");
+  });
 
+  //pagination 頁籤
+  $('.page-link').click( function(event){
+    $('.page-link').removeClass("bg-Active");
+    $(this).toggleClass("bg-Active");
+  });
 
+  // 由新到舊 選單
+  // 開起選單+加上黑框邊線
+  $('#select-dropdown-btn').click( function(event){
+    event.stopPropagation();
+    $('#select-dropdown').toggle();
+    $(this).toggleClass(" border-dark");
+  });
+  // 再點一下關閉
+  $(document).click( function(){
+    // $('#select-dropdown').hide();
+    // $('#select-dropdown-btn').removeClass(" border-dark");
+  });
 
+  // 切換按鈕文字
+  $('.new-to-old').click(function(e) {
+    e.preventDefault();
+    $('#select-dropdown').toggle();
+    $('.dropdown-btnText').text($('.new-to-old').text());
+  });
 
-// 由新到舊 選單
-// 開起選單+加上黑框邊線
-$('#select-dropdown-btn').click( function(event){
-  event.stopPropagation();
-  $('#select-dropdown').toggle();
-  $(this).toggleClass(" border-dark");
-});
-// 再點一下關閉
-$(document).click( function(){
-  $('#select-dropdown').hide();
-  $('#select-dropdown-btn').removeClass(" border-dark");
-});
-
-// 切換按鈕文字
-$('.new-to-old').click(function(e) {
-  e.preventDefault();
-  $('#select-dropdown').toggle();
-  $('.dropdown-btnText').text($('.new-to-old').text());
-});
-
-$('.old-to-new').click(function(e) {
-  e.preventDefault();
-  $('#select-dropdown').toggle();
-  $('.dropdown-btnText').text($('.old-to-new').text());
-});
+  $('.old-to-new').click(function(e) {
+    e.preventDefault();
+    $('#select-dropdown').toggle();
+    $('.dropdown-btnText').text($('.old-to-new').text());
+  });
 
 
 
@@ -65,42 +69,16 @@ $('.old-to-new').click(function(e) {
   //question 手風琴
   //下方文字區(question-text)先隱藏
   $(".question-text").hide();
-
-  //點 #question-item-1 會發生某件事
-  $( "#question-item-1" ).click(function(event) {
-    // #question-item-1 會添加 .border-2 跟 .border-white 的css樣式，再點一下就復原
+  
+  //點 .question-item 會發生某件事
+  $( ".question-item" ).click(function(event) {
+    // .question-item 會添加 .border-2 跟 .border-white 的css樣式，再點一下就復原
     $(this).toggleClass( "border-2 border-white" );
-    // #btn-icon-vertical-1 會移除 .btn-icon-vertical 的css樣式，再點一下就復原
-    $("#btn-icon-vertical-1").toggleClass("btn-icon-vertical");
-    // question-text-1 會往下滑出現（400毫秒），再點一下就復原
-    $( "#question-text-1" ).slideToggle(400);
+    // 第二個span 會移除 .btn-icon-vertical 的css樣式，再點一下就復原
+    $(this).find('span:nth-child(2)').toggleClass('btn-icon-vertical');
+    // .question-text 會往下滑出現（400毫秒），再點一下就復原
+    $(this).find('.question-text').slideToggle( 400 );
   });
-
-  $( "#question-item-2" ).click(function(event) {
-    $(this).toggleClass( "border-2 border-white" );
-    $("#btn-icon-vertical-2").toggleClass("btn-icon-vertical")
-    $( "#question-text-2" ).slideToggle( 400 );
-  });
-
-  $( "#question-item-3" ).click(function(event) {
-    $(this).toggleClass( "border-2 border-white" );
-    $("#btn-icon-vertical-3").toggleClass("btn-icon-vertical")
-    $( "#question-text-3" ).slideToggle( 400 );
-  });
-
-  $( "#question-item-4" ).click(function(event) {
-    $(this).toggleClass( "border-2 border-white" );
-    $("#btn-icon-vertical-4").toggleClass("btn-icon-vertical")
-    $( "#question-text-4" ).slideToggle( 400 );
-  });
-
-  $( "#question-item-5" ).click(function(event) {
-    $(this).toggleClass( "border-2 border-white" );
-    $("#btn-icon-vertical-5").toggleClass("btn-icon-vertical")
-    $( "#question-text-5" ).slideToggle( 400 );
-  });
-
-
 
 
   //Back to top
@@ -184,11 +162,3 @@ function slider() {
        leftAnimate();
       });
   }
-
-
-//   var list = document.querySelector('#filter-dropdown');
-// list.addEventListener('click', function(ev) {
-//   if( ev.target.tagName === 'LI') {
-//      ev.target.classList.toggle('check');
-//   }
-// }, false);

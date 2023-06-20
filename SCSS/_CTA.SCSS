@@ -1,8 +1,9 @@
-// .callToAction{
-// }
+//callToAction
+
 .buildService{
     border-bottom: 1px solid $Black-0;
     padding: 158px 0;
+
     h2{
         margin-bottom: 40px;
         @include font-style($Black-0,48px,1.2,900);
@@ -17,27 +18,18 @@
         @include card-outline($Black-0);
         display: inline-block;
         padding: 20px 40px;
+        width: auto;
+        margin: auto;
+        span{
+                vertical-align: middle;
+            }
     }
 }
 .question{
     margin-top: 158px;
     padding-bottom: 160px;
 }
-// bs手風琴
-.accordion{
-    color: #fff;
-    .accordion-item{
-        @include card-outline($Black-0);
-        background: none;
-        button{
-            background: none;
-            color: $Black-0;
-        }
-        .accordion-button::after {
-            display: none;
-        }
-    }
-}
+
 //自己的手風琴
 .question-item{
     margin-bottom:16px; 
@@ -57,13 +49,12 @@
             text-align: left;
             position: relative;
             margin: 20px 0;
-        }
-        .btn-icon{
-            position: absolute;
-            color: $Black-0;
-            margin-right: 10px;
-            top: 3px;
-            right: 100%;
+            span{
+                position: absolute;
+                margin-right: 10px;
+                top: 3px;
+                right: 100%;
+            }
         }
         .btn-icon-vertical{
             transform: rotate(90deg);
@@ -71,8 +62,10 @@
     }
     .question-text{
         @include font-style($Black-0,16px,1.5,400);
-        // display: none;
         padding: 0 20px 20px 60px;
+    }
+    .show{
+        display: block;
     }
     // +-號 樣式
     .material-symbols-outlined {

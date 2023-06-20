@@ -1,6 +1,10 @@
 .partner{
-    margin-top: 160px;
+  margin-top: 160px;
+  @include ipad(){
+      margin-top: 120px;
+  }
 }
+//漸層遮罩
 .partner-logo::before,.partner-logo::after{
     content:"";
     position:absolute;
@@ -11,11 +15,12 @@
         width:100px;
       }
 }
+//漸層遮罩（左）
 .partner-logo::before {
     left: 0px;
     background: linear-gradient(90deg,#000,rgba(0,0,0,0));
   }
-  
+//漸層遮罩（右）
 .partner-logo::after {
 right: 0px;
 background: linear-gradient(90deg,rgba(0,0,0,0),#000);
@@ -24,17 +29,15 @@ background: linear-gradient(90deg,rgba(0,0,0,0),#000);
     display:flex;
     justify-content: center;
     overflow: auto;
-    li{
+    img {
         margin-right:10px;
         margin-left:10px;
-    }
-    img {
         height: 40px;
         vertical-align: middle;
       }
 }
-/* 隱藏 x 軸 */
-/* Hide scrollbar for Chrome, Safari and Opera */
+//* 隱藏 x 軸 */
+//* Hide scrollbar for Chrome, Safari and Opera */
 .enterprise::-webkit-scrollbar {
     display: none;
 }
@@ -44,11 +47,8 @@ background: linear-gradient(90deg,rgba(0,0,0,0),#000);
     scrollbar-width: none; /* Firefox */
 }
 
-
-
-
-// 輪播
-.slider {
+// recommend 輪播
+.slider{
     width: 100%;
     margin: auto;
     overflow: hidden; // 這邊很重要 一定要加，若想看到底怎麼跑的，可以先槓掉，就可以看出ul向左移動的軌跡

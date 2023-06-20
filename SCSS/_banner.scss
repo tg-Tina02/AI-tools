@@ -10,15 +10,11 @@
 
     // 價格那頁
     h4{
+      margin-top: 80px;
+      margin-bottom: 238px;
       @include font-style($Black-0,48px,1.2,900);
       @include ipad(){
         font-size: 28px;
-      }
-    }
-    .banner-text{
-      margin-top: 80px;
-      margin-bottom: 238px;
-      @include ipad(){
         margin-top: 64px;
         margin-bottom: 258px;
       }
@@ -30,12 +26,15 @@
       padding: 20px 40px;
       color: $Black-0;
       @include card-outline($Black-0);
+      &:hover{
+        color: $Black-0;
+      }
   }
     
   .banner-animation-group{
       img{
         position: relative;
-        top: 100%;
+        top: 180px;
         @include ipad(){
           width: 33%;
         }
@@ -51,7 +50,7 @@
       }
     }
     @keyframes banner-animation{
-      0%{top:110%;}
-      40%,60%{top:0%}
-      100%{top:-110%}
+      0%{top:180px;}
+      40%,60%{top:0px}
+      100%{top:-180px}
     }

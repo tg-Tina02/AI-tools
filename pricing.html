@@ -4,22 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI 工具王</title>
+    <title>AI 工具王 定價</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- 連結boostrap的css -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    />
-
-    <!-- 連結外部icon樣式 -->
+    <!-- Google icon -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -29,21 +21,23 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 
+    <!-- 連結bs的css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
     <!-- 我的 css -->
     <link rel="stylesheet" href="css/all.css" />
 
-    <!-- go to top 用的js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- 要使用到的相對應語法 -->
-    <script src="js/all.js"></script>
-
-
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark">
-      <div class="container border-bottom">
-        <a class="navbar-brand" href="#">
+    <div class="container">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark border-bottom">
+        <a class="navbar-brand" href="pricing.html">
           <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="logo圖片">
         </a>
 
@@ -62,119 +56,116 @@
           <div class="hamburger-icon" id="hamburger-3"></div>
         </button>
 
-        <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html" target="_blank">首頁</a>
+              <a class="nav-link" aria-current="page" href="index.html">首頁</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">訂價</a>
+              <a class="nav-link" href="pricing.html">訂價</a>
             </li>
           </ul>
+          <footer class="d-md-none border-top w-100">
+            <div class="d-flex flex-column flex-md-row">
+              <p class="me-5">AI工具王 © 2023</p>
+              <ul class="d-flex gap-4 p-0 mt-4 mt-md-0">
+                <li><a href="javascript:;">Facebook</a></li>
+                <li><a href="javascript:;">Twitter</a></li>
+                <li><a href="javascript:;">Instagram</a></li>
+              </ul>
+            </div>
+          </footer>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="container">
       <!-- banner -->
-      <div class="row banner">
-        <div class="col-12">
-          <h2>
-            用多少，<br>
-            付多少
-          </h2>
+      <div class="banner">
+        <h2>
+          用多少，<br>
+          付多少
+        </h2>
+        <h4 class="w-50 ms-auto">
+          我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。
+        </h4>
+        <div class="banner-animation-group overflow-hidden d-flex">
+          <img src="images/banner-animation.png" alt="" class="arrow-1">
+          <img src="images/banner-animation.png" alt="" class="arrow-2">
+          <img src="images/banner-animation.png" alt="" class="arrow-3 me-auto">
         </div>
-        <div class="col-12 banner-text">
-          <h4 class="w-50 ms-auto">
-            我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。
-          </h4>
-        </div>
-        <div class="col-12 banner-animation-group overflow-hidden d-flex">
-            <img src="images/banner-animation.png" alt="" class="arrow-1">
-            <img src="images/banner-animation.png" alt="" class="arrow-2">
-            <img src="images/banner-animation.png" alt="" class="arrow-3 me-auto">
-          </div>
       </div>
 
       <!-- price -->
-      <ul class="row price-group g-3 mt-160">
+      <div class="price mt-160">
         <h3>定價</h3>
-        <li class="col-12 col-md-6">
-          <div class="price-card">
+        <ul class="card-group">
+          <li class="price-card">
             <div class="card-body">
-              <h4>琪琪</h4>
+              <div class="name">琪琪</div>
               <ul>
                 <li>初級</li>
                 <li>速度最快</li>
               </ul>
             </div>
-            <div class="card-footer d-flex justify-content-between">
+            <div class="card-footer">
               <div class="price">
                 NT$5
               </div>
-              <a href="javascript:void(0)" class="arrow-up">開始使用<span class="material-symbols-outlined btn-icon">
+              <a href="javascript:;" class="arrow-up">開始使用<span class="material-symbols-outlined">
                 north_east
                 </span></a>
             </div>
-          </div>
-        </li>
-        <li class="col-12 col-md-6">
-          <div class="price-card">
+          </li>
+          <li class="price-card">
             <div class="card-body">
-              <h4>昊昊</h4>
+              <div class="name">昊昊</div>
               <ul>
                 <li>中級</li>
               </ul>
             </div>
-            <div class="card-footer d-flex justify-content-between">
+            <div class="card-footer">
               <div class="price">
                 NT$5
               </div>
-              <a href="#" class="arrow-up">開始使用<span class="material-symbols-outlined btn-icon">
+              <a href="javascript:;" class="arrow-up">開始使用<span class="material-symbols-outlined">
                 north_east
                 </span></a>
             </div>
-          </div>
-        </li>
-        <li class="col-12 col-md-6">
-          <div class="price-card">
+          </li>
+          <li class="price-card">
             <div class="card-body">
-              <h4>卡卡</h4>
+              <div class="name">卡卡</div>
               <ul>
                 <li>高級</li>
               </ul>
-          </div>
-            <div class="card-footer d-flex justify-content-between">
+            </div>
+            <div class="card-footer">
               <div class="price">
                 NT$5
               </div>
-              <a href="#" class="arrow-up">開始使用<span class="material-symbols-outlined btn-icon">
+              <a href="javascript:;" class="arrow-up">開始使用<span class="material-symbols-outlined">
                 north_east
                 </span></a>
             </div>
-          </div>
-        </li>
-        <li class="col-12 col-md-6">
-          <div class="price-card">
+          </li>
+          <li class="price-card">
             <div class="card-body">
-              <h4>杰杰</h4>
+              <div class="name">杰杰</div>
               <ul>
                 <li>最高級</li>
                 <li>資訊最完善</li>
               </ul>
-          </div>
-            <div class="card-footer d-flex justify-content-between">
+            </div>
+            <div class="card-footer">
               <div class="price">
                 NT$5
               </div>
-              <a href="#" class="arrow-up">開始使用<span class="material-symbols-outlined btn-icon">
+              <a href="javascript:;" class="arrow-up">開始使用<span class="material-symbols-outlined">
                 north_east
                 </span></a>
             </div>
-          </div>
-        </li>
-      </ul>
-
+          </li>
+        </ul>
+      </div>
 
       <!-- regulate -->
       <div class="row regulate mt-160">
@@ -195,8 +186,8 @@
             <p>需對使用過程中產生的數據負責，不得擅自泄露數據。</p>
           </li>
         </ul>
+      </div>
     </div>
-  </div>
 
     <!-- tools -->
     <div class="tools bg-white">
@@ -232,65 +223,65 @@
             <ul class="filter-dropdown shadow" id="filter-dropdown">
               <!-- 上半部 -->
               <li class="filter-dropdown-item-title">AI模型</li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">所有模型</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">卡卡</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">杰杰</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">琪琪</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">昊昊</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">所有模型</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">卡卡</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">杰杰</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">琪琪</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">昊昊</a></li>
 
               <!-- 分隔線 -->
               <li><hr class="mt-2" /></li>
 
               <!-- 下半部 -->
               <li class="filter-dropdown-item-title mt-3">類型</li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">所有類型</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目1</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目2</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目3</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目4</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目5</a></li>
-              <li><a class="filter-dropdown-item" href="javascript:void(0)">篩選項目6</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">所有類型</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">篩選項目1</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">篩選項目2</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">篩選項目3</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">篩選項目4</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">篩選項目5</a></li>
+              <li><a class="filter-dropdown-item" href="javascript:;">篩選項目6</a></li>
             </ul>
           </div>
 
           <!-- 中間頁籤 自己的 -->
           <ul class="myNav">
-            <li class="nav-item">
-              <a class="nav-link bg-Active" aria-current="page" href="javascript:void(0)"
+            <li class="nav-item ms-0">
+              <a class="nav-link bg-Active" aria-current="page" href="javascript:;"
                 >全部</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">聊天</a>
+              <a class="nav-link" href="javascript:;">聊天</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">影像辨識</a>
+              <a class="nav-link" href="javascript:;">影像辨識</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">翻譯</a>
+              <a class="nav-link" href="javascript:;">翻譯</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">行銷</a>
+              <a class="nav-link" href="javascript:;">行銷</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">客服</a>
+              <a class="nav-link" href="javascript:;">客服</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">生產力</a>
+              <a class="nav-link" href="javascript:;">生產力</a>
             </li>
           </ul>
 
           <!-- （右邊）由新到舊 -->
           <div class="select">
-            <a href="javascript:" class="select-button" id="select-dropdown-btn">
+            <a href="javascript:;" class="select-button" id="select-dropdown-btn">
               <span class="dropdown-btnText d-inline-block">由新到舊</span>
               <span class="material-symbols-outlined">
               expand_more
               </span>
             </a>
             <ul class="select-dropdown shadow" id="select-dropdown">
-              <li><a class="select-dropdown-item new-to-old" href="javascript:void(0)">由新到舊</a></li>
-              <li><a class="select-dropdown-item old-to-new" href="javascript:void(0)">由舊到新</a></li>
+              <li><a class="select-dropdown-item new-to-old" href="javascript:;">由新到舊</a></li>
+              <li><a class="select-dropdown-item old-to-new" href="javascript:;">由舊到新</a></li>
             </ul>
           </div>
         </div>
@@ -315,11 +306,11 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between">
                   <div class="fw-bold">Al模型</div>
-                  <div>卡卡</div>
+                  <di>卡卡</di>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <div>#聊天</div>
-                  <a href="javascript:void(0)" class="text-dark material-icons">share</a>
+                  <a href="javascript:;">#聊天</a>
+                  <a href="javascript:;" class="text-dark material-icons">share</a>
                 </li>
               </ul>
             </div>
@@ -340,11 +331,11 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between">
                   <div class="fw-bold">Al模型</div>
-                  <div>杰杰</div>
+                  <di>杰杰</di>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <div>#影像辨識</div>
-                  <a href="javascript:void(0)" class="text-dark material-icons">share</a>
+                  <a href="javascript:;">#影像辨識</a>
+                  <a href="javascript:;" class="text-dark material-icons">share</a>
                 </li>
               </ul>
             </div>
@@ -368,8 +359,8 @@
                   <div>琪琪</div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <div>#翻譯</div>
-                  <a href="javascript:void(0)" class="text-dark material-icons">share</a>
+                  <a href="javascript:;">#翻譯</a>
+                  <a href="javascript:;" class="text-dark material-icons">share</a>
                 </li>
               </ul>
             </div>
@@ -391,11 +382,11 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between">
                   <div class="fw-bold">Al模型</div>
-                  <div>昊昊</div>
+                  <di>昊昊</di>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <div class="d-inline-block">#行銷</div>
-                  <a href="javascript:void(0)" class="text-dark material-icons">share</a>
+                  <a href="javascript:;">#行銷</a>
+                  <a href="javascript:;" class="text-dark material-icons">share</a>
                 </li>
               </ul>
             </div>
@@ -416,11 +407,11 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between">
                   <div class="fw-bold">Al模型</div>
-                  <div>卡卡</div>
+                  <di>卡卡</di>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <div>#客服</div>
-                  <a href="javascript:void(0)" class="text-dark material-icons">share</a>
+                  <a href="javascript:;">#客服</a>
+                  <a href="javascript:;" class="text-dark material-icons">share</a>
                 </li>
               </ul>
             </div>
@@ -441,11 +432,11 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between">
                   <div class="fw-bold">Al模型</div>
-                  <div>杰杰</div>
+                  <di>杰杰</di>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <div>#生產</div>
-                  <a href="javascript:void(0)" class="text-dark material-icons">share</a>
+                  <a href="javascript:;">#生產</a>
+                  <a href="javascript:;" class="text-dark material-icons">share</a>
                 </li>
               </ul>
             </div>
@@ -455,22 +446,22 @@
         <!-- pagination bs-->
         <ul class="pagination">
           <li class="page-item ms-auto">
-            <a class="page-link bg-Active" href="javascript:void(0)">1</a>
+            <a class="page-link bg-Active" href="javascript:;">1</a>
           </li>
           <li class="page-item" aria-current="page">
-            <a class="page-link" href="javascript:void(0)">2</a>
+            <a class="page-link" href="javascript:;">2</a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="javascript:void(0)">3</a>
+            <a class="page-link" href="javascript:;">3</a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="javascript:void(0)">4</a>
+            <a class="page-link" href="javascript:;">4</a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="javascript:void(0)">5</a>
+            <a class="page-link" href="javascript:;">5</a>
           </li>
           <li class="page-item">
-            <a href="javascript:void(0)">
+            <a href="javascript:;">
               <span class="material-symbols-outlined"> chevron_right </span>
             </a>
           </li>
@@ -480,21 +471,21 @@
 
     <!-- callToAction -->
     <div class="container callToAction">
-      <div
-        class="row question border-bottom">
+
+      <!-- question -->
+      <div class="row question border-bottom">
         <div class="col-12 col-lg-4">
           <h3>常見問題</h3>
         </div>
-
         <!-- 手風琴 自己做的 -->
         <ul class="col-12 col-lg-8 question-group">
           <li class="question-item" id="question-item-1">
             <button class="question-btn">
               <h4>
-                <span class="material-symbols-outlined btn-icon">
+                <span class="material-symbols-outlined">
                 check_indeterminate_small
                 </span>
-                <span class="material-symbols-outlined btn-icon btn-icon-vertical" id="btn-icon-vertical-1">
+                <span class="material-symbols-outlined btn-icon-vertical" id="btn-icon-vertical-1">
                   check_indeterminate_small
                 </span>
                 如何選擇適合的Al模型？
@@ -507,10 +498,10 @@
           <li class="question-item" id="question-item-2">
             <button class="question-btn">
               <h4>
-                <span class="material-symbols-outlined btn-icon">
+                <span class="material-symbols-outlined">
                 check_indeterminate_small
                 </span>
-                <span class="material-symbols-outlined btn-icon btn-icon-vertical" id="btn-icon-vertical-2">
+                <span class="material-symbols-outlined btn-icon-vertical" id="btn-icon-vertical-2">
                   check_indeterminate_small
                 </span>
                 租用模型的費用是如何計算的？
@@ -523,10 +514,10 @@
           <li class="question-item" id="question-item-3">
             <button class="question-btn">
               <h4>
-                <span class="material-symbols-outlined btn-icon">
+                <span class="material-symbols-outlined">
                 check_indeterminate_small
                 </span>
-                <span class="material-symbols-outlined btn-icon btn-icon-vertical" id="btn-icon-vertical-3">
+                <span class="material-symbols-outlined btn-icon-vertical" id="btn-icon-vertical-3">
                   check_indeterminate_small
                 </span>
                 如何進行付款？
@@ -539,10 +530,10 @@
           <li class="question-item" id="question-item-4">
             <button class="question-btn">
               <h4>
-                <span class="material-symbols-outlined btn-icon">
+                <span class="material-symbols-outlined">
                 check_indeterminate_small
                 </span>
-                <span class="material-symbols-outlined btn-icon btn-icon-vertical" id="btn-icon-vertical-4">
+                <span class="material-symbols-outlined btn-icon-vertical" id="btn-icon-vertical-4">
                   check_indeterminate_small
                 </span>
                 租用模型的期限是多久？
@@ -555,10 +546,10 @@
           <li class="question-item" id="question-item-5">
             <button class="question-btn">
               <h4>
-                <span class="material-symbols-outlined btn-icon">
+                <span class="material-symbols-outlined">
                 check_indeterminate_small
                 </span>
-                <span class="material-symbols-outlined btn-icon btn-icon-vertical" id="btn-icon-vertical-5">
+                <span class="material-symbols-outlined btn-icon-vertical" id="btn-icon-vertical-5">
                   check_indeterminate_small
                 </span>
                 如果在使用過程中遇到問題，應該怎麼處理？
@@ -571,45 +562,56 @@
         </ul>
       </div>
 
+      <!-- siteMap -->
       <div
-        class="row siteMap flex-column-reverse flex-md-row justify-content-between"
+        class="siteMap d-flex flex-column-reverse flex-md-row justify-content-between"
       >
-        <ul class="col-auto d-flex flex-column">
-          <li><a href="index.html" target="_blank">首頁</a></li>
-          <li><a href="javascript:void(0)">定價</a></li>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="pricing.html" target="_blank">定價</a></li>
         </ul>
-        <div class="col-auto mb-5">
+        <div class="mb-5">
           <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="logo圖片">
         </div>
       </div>
-    </div>
 
-    <!-- footer -->
-    <div class="footer container">
-      <div class="row p-2 w-100 m-0">
-        <div class="col-auto">AI工具王 © 2023</div>
-        <ul
-          class="col-auto d-flex gap-4 ms-md-5 order-1 order-md-0 mt-3 mt-md-0"
-        >
-          <li><a href="javascript:void(0)">Facebook</a></li>
-          <li><a href="javascript:void(0)">Twitter</a></li>
-          <li><a href="javascript:void(0)">Instagram</a></li>
-        </ul>
-        <div class="col-auto ms-auto back-To-top">
-          <a href="javascript:void(0)" id="scrollToTop" class="arrow-up">
-            Back to top<span class="material-symbols-outlined btn-icon">
+      <!-- footer -->
+      <footer class="d-flex justify-content-between align-content-center">
+        <div class="d-flex flex-column flex-md-row">
+          <p class="me-5">AI工具王 © 2023</p>
+          <ul class="d-flex gap-4 p-0 mt-4 mt-md-0">
+            <li><a href="javascript:;">Facebook</a></li>
+            <li><a href="javascript:;">Twitter</a></li>
+            <li><a href="javascript:;">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div class="back-To-top">
+          <a href="javascript:;" id="scrollToTop" class="arrow-up">
+            Back to top<span class="material-symbols-outlined">
               arrow_upward
             </span>
           </a>
         </div>
-      </div>
+      </footer>
     </div>
 
-    <!-- 連結boostrap的js -->
+
+
+
+    <!-- bs的js -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <!-- axios 套件 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- <script src="js/API串接.js"></script> -->
+
+    <!-- jq 的CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- 我的js -->
+    <script src="js/all.js"></script>
   </body>
 </html>

@@ -1,13 +1,28 @@
-.price-group{
-    padding: 0;
-    h4{
+.price{
+    .card-group{
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .name{
         @include font-style($Black-0,32px,1.2,900);
     }
     .price-card{
+        width: 49%;
+        margin-top: 24px;
+        @include ipad{
+            width: 100%;
+            margin-top: 12px;
+        }
         @include card-outline($Black-80);
         &:hover{
             border-color: #fff;
             transition: all 0.2s linear;//不確定//
+            .card-footer{
+                border-color: #fff;
+                transition: all 0.2s linear;
+            }
         }
         display: flex;
         flex-direction: column;
@@ -17,9 +32,11 @@
             height:240px;
           }
         }
-        
-
+    }
+    .card-body{
+        @include font-style($Black-20,16px,1.5,400);
         ul{
+            margin-top: 12px;
             color: $Black-20;
             list-style-type: disc;
             li::marker{
@@ -27,12 +44,12 @@
             };
         }
     }
-    .card-body{
-        @include font-style($Black-20,16px,1.5,400);
-    }
     .card-footer{
         border-top: 1px solid $Black-80;
         padding:20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .price{
             @include font-style($Black-0,20px,1.2,900);
             &::after {
@@ -44,5 +61,10 @@
         a{
             color: $Black-0;
             @include font-style($Black-0,16px,1.5,700);
+            span{
+                vertical-align: middle;
+                font-size: 16px;
+                margin-left: 14px;
+            }
         }
     }
